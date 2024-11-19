@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use(express.json());
 
-app.get('/api/data', (req, res) => {
+app.get('/api', (req, res) => {
   device.open(function(error) {
     if(error) {
       res.json({ message: 'Node.js API did not find a USB printer!' });
